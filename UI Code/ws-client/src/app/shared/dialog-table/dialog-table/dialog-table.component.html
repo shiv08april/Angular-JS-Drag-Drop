@@ -1,0 +1,97 @@
+<!-- <mat-dialog-content *ngIf="fileDetails.length > 0; else noRecord">
+  <mat-table
+    #table
+    [dataSource]="fileDetails"
+    class="example-table"
+    matSort
+    matSortActive="created"
+    matSortDisableClear
+    matSortDirection="asc"
+  >
+    <ng-container matColumnDef="fileName">
+      <mat-header-cell *matHeaderCellDef>File Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.fileName }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="filePath">
+      <mat-header-cell *matHeaderCellDef>File Path</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.filePath }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="modifiedDate">
+      <mat-header-cell *matHeaderCellDef>Modified Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.modifiedDate }}</mat-cell>
+    </ng-container>
+
+  
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    
+  </mat-table>
+</mat-dialog-content>
+<ng-template #noRecord> <div>No Records found</div> </ng-template>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close tabindex="-1">Close</button>
+</mat-dialog-actions> -->
+
+<!-- <ng-container matColumnDef="isDataAvailable">
+      <mat-footer-cell *matFooterCellDef colspan="6"> No Data found </mat-footer-cell>
+    </ng-container> -->
+<!-- <mat-footer-row
+      *matFooterRowDef="['isDataAvailable']"
+      [ngClass]="{ hide: !(fileDetails != null && fileDetails.length == 0) }"
+    >
+    </mat-footer-row> -->
+<!-- <div *ngIf="fileDetails.length === 0">No records found</div> -->
+
+<mat-dialog-content *ngIf="treeNode.length > 0; else noRecord">
+  <mat-table
+    #table
+    [dataSource]="treeNode"
+    class="example-table"
+    matSort
+    matSortActive="created"
+    matSortDisableClear
+    matSortDirection="asc"
+  >
+    <ng-container matColumnDef="fileName">
+      <mat-header-cell *matHeaderCellDef>File Name</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.fileName }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="age">
+      <mat-header-cell *matHeaderCellDef>File Age</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.age }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="filePath">
+      <mat-header-cell *matHeaderCellDef>File Path</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.filePath }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="modifiedDate">
+      <mat-header-cell *matHeaderCellDef>Modified Date</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.modifiedDate }}</mat-cell>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="isDataAvailable">
+      <mat-footer-cell *matFooterCellDef colspan="6"> No Data found </mat-footer-cell>
+    </ng-container> -->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    <!-- <mat-footer-row
+      *matFooterRowDef="['isDataAvailable']"
+      [ngClass]="{ hide: !(fileDetails != null && fileDetails.length == 0) }"
+    >
+    </mat-footer-row> -->
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+  <!-- <div *ngIf="fileDetails.length === 0">No records found</div> -->
+</mat-dialog-content>
+<ng-template #noRecord> <div>No Records found</div> </ng-template>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" mat-dialog-close tabindex="-1">Close</button>
+</mat-dialog-actions>

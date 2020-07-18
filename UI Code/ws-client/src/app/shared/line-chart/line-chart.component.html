@@ -1,0 +1,44 @@
+<div style="display: block; width: 55%; margin-left: 2%;">
+  <canvas
+    baseChart
+    [datasets]="lineDataChart"
+    [labels]="mlineChartLabels"
+    [options]="lineChartOptions"
+    [colors]="lineChartColors"
+    [legend]="lineChartLegend"
+    [chartType]="lineChartType"
+    (chartClick)="chartClicked($event)"
+  >
+  </canvas>
+</div>
+<!-- 
+<mat-table
+  #table
+  [dataSource]="fileDetails"
+  class="example-table"
+  matSort
+  matSortActive="created"
+  matSortDisableClear
+  matSortDirection="asc"
+>
+
+  <ng-container matColumnDef="fileName">
+    <mat-header-cell *matHeaderCellDef>File Name</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.fileName }}</mat-cell>
+  </ng-container>
+
+ 
+  <ng-container matColumnDef="filePath">
+    <mat-header-cell *matHeaderCellDef>File Path</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.filePath }}</mat-cell>
+  </ng-container>
+
+
+  <ng-container matColumnDef="modifiedDate">
+    <mat-header-cell *matHeaderCellDef>Modified Date</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.modifiedDate }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table> -->

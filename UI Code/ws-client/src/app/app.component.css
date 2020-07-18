@@ -1,0 +1,13 @@
+.flex-container {
+  margin-top: 4%;
+}
+
+.flex-container .a {
+  /* float: right;
+  margin-right: 15%; */
+}
+
+.flex-container .b {
+  /* margin-left: 10%;
+   */
+}

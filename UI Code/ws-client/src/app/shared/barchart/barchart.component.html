@@ -1,0 +1,28 @@
+<!-- <h4 style="text-align:center">Bar chart of Company A <br /><br /></h4>
+<br /> -->
+<div>
+  <div style="display: block; width: 55%; margin-left: 2%;">
+    <!-- <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="mbarChartLabels"
+      [options]="barChartOptions"
+      [colors]="barChartColors"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"
+    ></canvas> -->
+
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="mbarChartLabels"
+      [options]="barChartOptions"
+      [colors]="barChartColors"
+      [legend]="barChartLegend"
+      [chartType]="lineChartType"
+    >
+    </canvas>
+  </div>
+</div>
